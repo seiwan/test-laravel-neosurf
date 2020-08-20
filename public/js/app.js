@@ -40844,26 +40844,32 @@ var render = function() {
                 )
               : _c("tbody", [
                   _c("tr", [
-                    _c("td", { attrs: { colspan: 5 } }, [
-                      _vm._v(
-                        "\n                            Aucun produit à afficher\n                        "
-                      )
-                    ])
+                    _c(
+                      "td",
+                      { staticClass: "text-center", attrs: { colspan: 5 } },
+                      [
+                        _vm._v(
+                          "\n                            Aucun produit à afficher\n                        "
+                        )
+                      ]
+                    )
                   ])
                 ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "text-left" }, [
-            _vm._v(
-              "\n                Affichage des produits " +
-                _vm._s(_vm.first) +
-                " à " +
-                _vm._s(_vm.last) +
-                " sur " +
-                _vm._s(_vm.total) +
-                " produits\n            "
-            )
-          ])
+          _vm.products && _vm.products.length != 0
+            ? _c("div", { staticClass: "text-left" }, [
+                _vm._v(
+                  "\n                Affichage des produits " +
+                    _vm._s(_vm.first) +
+                    " à " +
+                    _vm._s(_vm.last) +
+                    " sur " +
+                    _vm._s(_vm.total) +
+                    " produits\n            "
+                )
+              ])
+            : _vm._e()
         ])
       ]),
       _vm._v(" "),

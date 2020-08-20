@@ -81,14 +81,14 @@
 
                     <tbody v-else>
                         <tr>
-                            <td v-bind:colspan="5">
+                            <td v-bind:colspan="5" class="text-center">
                                 Aucun produit à afficher
                             </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <div class="text-left">
+                <div class="text-left" v-if="products && products.length != 0">
                     Affichage des produits {{ first }} à {{ last }} sur {{ total }} produits
                 </div>
             </div>
